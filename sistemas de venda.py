@@ -1,49 +1,64 @@
 #carinho de compra e menu
-carrinho = []
-print("""
-Menu
-0 - Finalizar programa
-1 - Adicionar produto
-2 - Ver carrinho
-3 - Confirma produto
-4 - Ver total
-0 - sair
-""")
-#escolhas de opcoes
-escolha = input('Escolha uma opção: ')
+escolha=6
+lista=[]
 
-while escolha != 0:
-    if escolha == 1:
-        item = input('Adicionado Produto: ')
-        if item in carrinho:
-            print('Produto já está no carrinho:')
-            x = int(input('Deseja mudar a quantidade? 1 para sim, 2 para não:'))
-            if x == 1:
-                novaquantidade = int(input('Informe a nova quantidade do produto:'))
-                item = 0
-                quantidade = novaquantidade
-                input(item)
-        else:
-            quantidade = int(input("Entre a quantidade: "))
-            carrinho.append(item)
+while escolha !="0":
+  print("Menu")
+  print("0 - Fim")
+  print("1 - Comprar Produtos")
+  print("2 - Confere Lista de Produtos")
+  print("3 - Confirma Produto")
+  print("4 - Os Pedidos Feitos")
+  print("5 - Mostra Total")
+  escolha=input("Escolha uma opção:")
+  if escolha =="0":
+    escolha=input("Tem certeza que quer sair? 0 - Sim , 5 - Não")
+  if escolha =="1":
+    print("Cadastrando produto...")
+    produto=input("Escolha o nome do produto:")
+    quantidade=input("Escolha a quantidade do produto:")
+    lista.append(["",produto,quantidade,0])
+  if escolha=="2":
+    print("Exibindo produtos...")
+    contador=0
+    for produto in lista:
+
+      print(contador,"#",produto[0]," ",produto[1],"-",produto[2])
+      contador=contador+1
+  if escolha=="3":
+    print("Confirmando produto...")
+    posicao=input("Digite a posição do produto:")
+    posicao_int=int(posicao)
+    preco=input("Digite o preco do "+lista[posicao_int][1] +":")
+    lista[posicao_int][0]="OK"
+    lista[posicao_int][3]=preco
+
+  if escolha == "4":
+    print("Todos os Pedidos Feitos>...")
+    print("Produtos que não foram comprados...")
+    contador=0
+    for produto in lista:
+      if produto[0]=="":
+        print(contador,"#",produto[0]," ",produto[1],"-",produto[2], "R$", produto[3])
+        contador=contador+1
+    print("Produtos que foram comprados...")
+  if escolha=="5":
+    print("Mostrando Todos Produtos...")
+    print("Produtos que não foram comprados...")
+    contador=0
+    for produto in lista:
+      if produto[0]=="":
+        print(contador,"#",produto[0]," ",produto[1],"-",produto[2], "R$", produto[3])
+        contador=contador+1
+    print("Produtos que foram comprados...")
+    contador=0
+    precototal=0
+    for produto in lista:
+      if produto[0]=="OK":
+        print(contador,"#",produto[0]," ",produto[1],"-",produto[2], "R$", produto[3])
+        contador=contador+1
+        precototal=precototal+int(produto[2])*float(produto[3])
+    print("Preco Total: R$",precototal)
 
 
-    if escolha == 2:
-        print("Exibindo produtos...")
-        contador = 0
-        for item in carrinho:
-            print(contador,item,":",quantidade)
-            contador = contador + 1
-
-    if escolha == 3:
-        posicao = int(input(f'Digite a posição do item'))
-        posicao_int = int(posicao)
-        preco = input(f"Digite o preço do produto {carrinho[posicao_int][1]}")
-        carrinho[item] = "OK"
-        carrinho[posicao][3] = preco
-    escolha = int(input("Escolha mais uma opção: "))
-
-
-
-else:
-   print("Programa encerrado")
+print("Fim do programa!")
