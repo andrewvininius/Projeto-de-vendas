@@ -32,11 +32,8 @@
 
 ## Como Executar o Aplicativo:
 
-1) Precisa Ter a Base de Dados no Arquivo (assets.zip)
+1) Precisa Ter a Base de Dados no Arquivo (assets.zip).
 
-2) Inicializando, Todas Linhas São Bem Intuitivas 
+2) Inicializando, Todas Linhas São Bem Intuitivas.
 
-3)Trabalhei para o Melhor Redimento
-
-
-<center><img src="https://user-images.githubusercontent.com/38620899/106393900-5aa85880-63d8-11eb-88f1-07ac30adad80.gif"></center>
+3)Trabalhei para o Melhor Redimento.
