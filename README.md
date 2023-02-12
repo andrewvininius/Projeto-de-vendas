@@ -36,4 +36,4 @@
 
 2) Inicializando, Todas Linhas São Bem Intuitivas.
 
-3)Trabalhei para o Melhor Rendimento.
+3) Trabalhei para o Melhor Rendimento.
