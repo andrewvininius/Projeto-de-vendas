@@ -8,10 +8,10 @@
 
 + Login do Usuário.
 + O usuário pode adicionar e remover produtos do carrinho, O Usuário Pode Consultar os Pedidos Feitos.
-+ O Usuário Organizaros Produtos por Preço, Popularidade e Ordem Alfabética. 
++ O Usuário Organizar os Produtos por Preço, Popularidade e Ordem Alfabética. 
 + Calculado frete, subtotal e total, O Usuário Pode Realizar Checkout Também.
 + A Cada Produto Adicionado, Somar R$ 10,00 ao Frete.
-+ Quando o Valor dos Produtos Igual ou Superior a R$ 250,00, o Frete é Grátis.
++ Quando o Valor dos Produtos é Igual ou Superior a R$ 250,00, o Frete é Grátis.
 
 
 ## Implemento Outro funcionalidade:
@@ -36,4 +36,4 @@
 
 2) Inicializando, Todas Linhas São Bem Intuitivas.
 
-3)Trabalhei para o Melhor Redimento.
+3)Trabalhei para o Melhor Rendimento.
